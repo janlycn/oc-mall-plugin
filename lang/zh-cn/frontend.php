@@ -72,7 +72,7 @@ return [
     'shipping_method.button_label' => 'Use this method',
     'shipping_tracking' => 'Tracking',
     'change' => 'Change',
-    'select' => '-- Select',
+    'select' => '-- 请选择',
     'checkout.checkout' => 'Place order',
     'address_selector.create' => 'Create new address',
     'address_selector.edit' => 'Edit',
