@@ -7,7 +7,7 @@
             $body.on('click', '.js-mall-filter', function () {
                 var $input = $(this).find('input');
                 $(this).toggleClass('mall-filter__option--selected')
-                $input.prop('checked', ! $input.prop('checked'));
+                // $input.prop('checked', ! $input.prop('checked'));
                 $propertiesForm.trigger('submit');
             });
             $body.on('click', '.js-mall-clear-filter', function () {

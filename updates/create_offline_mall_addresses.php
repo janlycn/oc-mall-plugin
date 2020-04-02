@@ -15,6 +15,7 @@ class CreateOfflineMallAddresses extends Migration
             $table->text('lines');
             $table->string('zip', 20);
             $table->string('city');
+            $table->string('phone');
             $table->integer('state_id')->unsigned()->nullable()->index();
             $table->integer('country_id')->unsigned()->nullable()->index();
             $table->text('details')->nullable();

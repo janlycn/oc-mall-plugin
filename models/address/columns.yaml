@@ -7,8 +7,14 @@ columns:
     company:
         label: 'offline.mall::frontend.form.company'
         type: text
+        invisible: true
         searchable: true
-        sortable: true
+        sortable: false
+    phone:
+        label: 'coder.mallplus::lang.address.phone'
+        type: text
+        searchable: true
+        sortable: false
     name:
         label: 'offline.mall::frontend.form.recipient'
         type: text

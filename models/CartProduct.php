@@ -43,6 +43,7 @@ class CartProduct extends Model
     public $with = [
         'product',
         'product.taxes',
+        'variant',
         'service_options.service.taxes',
         'service_options.prices',
         'custom_field_values',

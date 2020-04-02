@@ -22,9 +22,11 @@ class Address extends Model
         'country_id'  => 'required|exists:rainlab_location_countries,id',
         'customer_id' => 'required|exists:offline_mall_customers,id',
         'city'        => 'required',
+        'phone'       => 'required',
     ];
 
     public $fillable = [
+        'phone',
         'company',
         'name',
         'lines',
@@ -106,6 +108,7 @@ class Address extends Model
             'created_at'  => $this->created_at,
             'updated_at'  => $this->updated_at,
             'deleted_at'  => $this->deleted_at,
+            'phone'       => $this->phone
         ];
     }
 }
