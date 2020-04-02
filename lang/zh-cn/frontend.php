@@ -54,6 +54,7 @@ return [
     'form.city' => '城市',
     'form.state' => '省/地区',
     'form.country' => '国家',
+    'form.phone' => '手机',
     'proceed_to_checkout' => 'Proceed',
     'address' => 'Address',
     'billing_address' => 'Billing address',

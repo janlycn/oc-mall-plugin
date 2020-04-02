@@ -54,6 +54,7 @@ return [
     'form.city' => 'City',
     'form.state' => 'State/County/Province',
     'form.country' => 'Country',
+    'form.phone' => 'Mobile',
     'proceed_to_checkout' => 'Proceed',
     'address' => 'Address',
     'billing_address' => 'Billing address',

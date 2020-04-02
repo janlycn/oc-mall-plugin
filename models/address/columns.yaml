@@ -11,7 +11,7 @@ columns:
         searchable: true
         sortable: false
     phone:
-        label: 'coder.mallplus::lang.address.phone'
+        label: 'offline.mall::frontend.form.phone'
         type: text
         searchable: true
         sortable: false

@@ -12,7 +12,7 @@ fields:
         span: auto
         type: text
     phone:
-        label: coder.mallplus::lang.address.phone
+        label: 'offline.mall::frontend.form.phone'
         span: auto
         type: text
     zip:

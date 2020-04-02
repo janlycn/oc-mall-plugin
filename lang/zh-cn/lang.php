@@ -486,15 +486,15 @@
         'valid_from' => '生效日期',
         'expires' => '失效日期',
         'number_of_usages' => '使用次数',
-        'shipping_description' => '抵消运费方式的名称',
-        'shipping_price' => '抵消的运费',
+        'shipping_description' => '配送说明',
+        'shipping_price' => '配送费用',
         'shipping_guaranteed_days_to_delivery' => '货期保证',
         'section_type' => '这个折扣有什么用？',
         'section_trigger' => '这个折扣什么时候适用？',
         'types' => [
             'fixed_amount' => '固定金额',
             'rate' => '百分比',
-            'shipping' => '抵消运费',
+            'shipping' => '运费',
         ],
         'triggers' => [
             'total' => '达到预设的订单总额',
