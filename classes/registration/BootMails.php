@@ -8,16 +8,16 @@ trait BootMails
     public function registerMailTemplates()
     {
         return [
-            'offline.mall::mail.customer.created',
-            'offline.mall::mail.order.state_changed',
-            'offline.mall::mail.order.shipped',
-            'offline.mall::mail.checkout.succeeded',
-            'offline.mall::mail.checkout.failed',
-            'offline.mall::mail.payment.failed',
-            'offline.mall::mail.payment.paid',
-            'offline.mall::mail.payment.refunded',
-            'offline.mall::mail.admin.checkout_succeeded',
-            'offline.mall::mail.admin.checkout_failed',
+            'offline.mall::mail.customer._created',
+            'offline.mall::mail.order._state_changed',
+            'offline.mall::mail.order._shipped',
+            'offline.mall::mail.checkout._succeeded',
+            'offline.mall::mail.checkout._failed',
+            'offline.mall::mail.payment._failed',
+            'offline.mall::mail.payment._paid',
+            'offline.mall::mail.payment._refunded',
+            'offline.mall::mail.admin._checkout_succeeded',
+            'offline.mall::mail.admin._checkout_failed',
         ];
     }
 
