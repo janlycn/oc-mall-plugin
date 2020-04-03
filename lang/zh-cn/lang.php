@@ -208,7 +208,7 @@
         'accessories' => '配件',
         'shipping_methods' => '配送方式',
         'accessory' => '配件',
-        'custom_fields' => '自定义字段',
+        'custom_fields' => '自选项',
         'variants' => '品种',
         'variant' => '品种',
         'discounts' => '折扣',
@@ -267,7 +267,7 @@
         'property_group' => '属性组',
         'options' => '选项',
         'option' => '选项',
-        'catalogue' => '待售产品目录',
+        'catalogue' => '产品目录',
         'out_of_stock' => '这种产品缺货。',
         'out_of_stock_short' => '无货',
         'stock_limit_reached' => '由于已达到库存限制，您不能再向购物车中添加此产品。',
@@ -494,7 +494,7 @@
         'types' => [
             'fixed_amount' => '固定金额',
             'rate' => '百分比',
-            'shipping' => '运费',
+            'shipping' => '配送',
         ],
         'triggers' => [
             'total' => '达到预设的订单总额',
@@ -1087,8 +1087,8 @@
         ],
     ],
     'customer_group' => [
-        'code_comment' => '此代码可用于以编程方式标识该组',
-        'discount_comment' => '在你的整个待售商品目录上给这个客户群以%的折扣',
+        'code_comment' => '此代码用于以编程方式标识该客户群组',
+        'discount_comment' => '在你的整个产品目录上给这个客户群以百分比的折扣',
     ],
     'order_status' => [
         'processed' => '已处理',
