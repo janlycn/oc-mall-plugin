@@ -24,7 +24,7 @@ class Discounts extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('OFFLINE.Mall', 'mall-orders', 'mall-discounts');
+        BackendMenu::setContext('OFFLINE.Mall', 'mall-sales', 'mall-discounts');
     }
 
     public function formAfterCreate(Discount $model)
