@@ -50,8 +50,8 @@ trait BootExtensions
                 'through'    => Customer::class,
                 'throughKey' => 'id',
             ];
-            $model->rules['surname']            = 'required';
-            $model->rules['name']               = 'required';
+            // $model->rules['surname']            = 'required';
+            // $model->rules['name']               = 'required';
         });
 
         RainLabUsersController::extend(function (RainLabUsersController $users) {
