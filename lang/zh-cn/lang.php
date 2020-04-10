@@ -77,7 +77,7 @@
         'all_categories' => '所有店铺分类',
         'single_category' => '单个店铺分类',
         'all_products' => '所有店铺产品',
-        'all_variants' => '所有店铺品种',
+        'all_variants' => '所有店铺品类',
     ],
     'currency_settings' => [
         'label' => '货币',
@@ -162,7 +162,7 @@
         'use_state' => '使用 国家/省/地区 字段',
         'use_state_comment' => '注册时，客户必须选择 国家/省/地区',
         'group_search_results_by_product' => '按产品分组搜索结果',
-        'group_search_results_by_product_comment' => '在搜索结果中只包含一个产品一次，不显示所有匹配的品种',
+        'group_search_results_by_product_comment' => '在搜索结果中只包含一个产品一次，不显示所有匹配的品类',
         'admin_email' => '管理员电子邮件',
         'admin_email_comment' => '管理员通知将发送到此地址',
         'base' => '基础设置',
@@ -209,8 +209,8 @@
         'shipping_methods' => '配送方式',
         'accessory' => '配件',
         'custom_fields' => '自选项',
-        'variants' => '品种',
-        'variant' => '品种',
+        'variants' => '品类',
+        'variant' => '品类',
         'discounts' => '折扣',
         'discount' => '折扣',
         'discount_percentage' => '折扣 (%)',
@@ -284,7 +284,7 @@
         'customers' => '客户',
         'customer_groups' => '客户群',
         'customer_group' => '客户群',
-        'product_or_variant' => '产品/品种',
+        'product_or_variant' => '产品/品类',
         'code' => '编码',
         'code_comment' => '此编码可用于以编程方式标识此记录',
         'checked' => '选中',
@@ -321,13 +321,13 @@
     ],
     'variant' => [
         'method' => [
-            'single' => '商品',
-            'variant' => '商品品种',
+            'single' => '单品',
+            'variant' => '多品类',
         ],
     ],
     'properties' => [
-        'use_for_variants' => '用于产品品种',
-        'use_for_variants_comment' => '启用后该属性可以用于产品的不同品种',
+        'use_for_variants' => '用于产品品类',
+        'use_for_variants_comment' => '启用后该属性可以用于产品的不同品类',
         'filter_type' => '过滤器类型',
         'filter_types' => [
             'none' => '不设置过滤器',
@@ -356,8 +356,8 @@
         'name' => '产品名称',
         'published' => '已发布',
         'published_short' => '已发布',
-        'is_virtual' => '是否虚拟商品',
-        'is_virtual_comment' => '该产品是虚拟商品 (比如可下载文件, 不发货)',
+        'is_virtual' => '是否虚拟产品',
+        'is_virtual_comment' => '该产品是虚拟产品 (比如可下载文件, 不发货)',
         'product_file' => '产品文件',
         'product_files' => '产品文件列表',
         'product_files_section_comment' => '这是一个虚拟产品。您可以在下面上传新的文件版本。客户可以下载最新版本。',
@@ -402,7 +402,7 @@
         'details' => '明细',
         'price_includes_tax' => '价格含税',
         'price_includes_tax_comment' => '该价格包括所有税费',
-        'group_by_property' => '品种分组属性',
+        'group_by_property' => '品类分组属性',
         'additional_descriptions' => '附加描述',
         'additional_properties' => '附加属性',
         'gtin' => '全球贸易项目编号 (GTIN)',
@@ -414,8 +414,8 @@
             'currency_dropdown' => '货币: ',
         ],
         'missing_category' => '该产品没有关联的分类。请在下面选择一个分类来编辑此产品。',
-        'variant_support_header' => '不支持品种',
-        'variant_support_text' => '所选类别没有定义品种属性。请将库存管理方式切换为“商品”或选择其他类别。',
+        'variant_support_header' => '不支持品类',
+        'variant_support_text' => '所选类别没有定义品类属性。请将库存管理方式切换为“产品”或选择其他类别。',
         'filter_virtual' => '仅显示虚拟产品',
     ],
     'product_file' => [
@@ -669,8 +669,8 @@
                     'description' => '该组件的强制过滤器',
                 ],
                 'include_variants' => [
-                    'title' => '显示产品品种',
-                    'description' => '对于多品种产品，显示产品的所有有效品种',
+                    'title' => '显示产品品类',
+                    'description' => '对于多品类产品，显示产品的所有有效品类',
                 ],
                 'include_children' => [
                     'title' => '包含子分类',
@@ -714,8 +714,8 @@
                     'description' => '包含子分类产品的属性和过滤器',
                 ],
                 'includeVariants' => [
-                    'title' => '包含品种',
-                    'description' => '显示不同品种的过滤器',
+                    'title' => '包含品类',
+                    'description' => '显示不同品类的过滤器',
                 ],
                 'includeSliderAssets' => [
                     'title' => '包括 noUI 滑块',
@@ -826,8 +826,8 @@
                     'title' => '每页的评论数',
                 ],
                 'currentVariantReviewsOnly' => [
-                    'title' => '仅显示该品种的评级',
-                    'description' => "不显示该产品其他品种的评论",
+                    'title' => '仅显示该品类的评级',
+                    'description' => "不显示该产品其他品类的评论",
                 ],
             ],
         ],
@@ -1004,16 +1004,16 @@
         'cartSummary' => [
             'details' => [
                 'name' => '购物车简介',
-                'description' => '显示购物车中的商品数量和总额',
+                'description' => '显示购物车中的产品数量和总额',
             ],
             'properties' => [
                 'showItemCount' => [
                     'title' => '显示产品数量',
-                    'description' => '显示购物车中的商品数量',
+                    'description' => '显示购物车中的产品数量',
                 ],
                 'showTotalPrice' => [
                     'title' => '显示总额',
-                    'description' => '显示购物车中所有商品的总额',
+                    'description' => '显示购物车中所有产品的总额',
                 ],
             ],
         ],
@@ -1050,8 +1050,8 @@
                     'description' => '要收藏的产品的ID',
                 ],
                 'variant' => [
-                    'name' => '品种',
-                    'description' => '要收藏的品种的ID',
+                    'name' => '品类',
+                    'description' => '要收藏的品类的ID',
                 ],
             ],
         ],
@@ -1073,7 +1073,7 @@
         'to_weight' => '至(重量/克)',
     ],
     'products' => [
-        'variants_comment' => '创建同一产品的不同品种',
+        'variants_comment' => '创建同一产品的不同品类',
     ],
     'order_states' => [
         'name' => '名称',
