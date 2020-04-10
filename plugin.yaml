@@ -73,7 +73,7 @@ navigation:
         label: '营销'
         url: offline/mall/discounts
         icon: icon-money
-        order: 799
+        order: 804
         permissions:
             - 'offline.mall.*'
         sideMenu:
