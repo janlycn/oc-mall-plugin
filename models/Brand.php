@@ -1,6 +1,7 @@
 <?php namespace OFFLINE\Mall\Models;
 
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Str;
 use Model;
 use October\Rain\Database\Traits\Sluggable;
 use October\Rain\Database\Traits\Sortable;
@@ -41,6 +42,13 @@ class Brand extends Model
     public $hasMany = [
         'products' => Product::class,
     ];
+
+    public function beforeSave() {
+        // todo
+        while(!isset($this->slug) || empty($this->slug) || Brand::select('id')->where('slug', $this->slug)->first()) {
+            $this->slug = strtolower(Str::random(8));
+        }
+    }
 
     public function afterDelete()
     {
