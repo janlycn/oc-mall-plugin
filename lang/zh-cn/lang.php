@@ -208,7 +208,7 @@
         'accessories' => '配件',
         'shipping_methods' => '配送方式',
         'accessory' => '配件',
-        'custom_fields' => '自选项',
+        'custom_fields' => '个性化选项',
         'variants' => '品类',
         'variant' => '品类',
         'discounts' => '折扣',
@@ -463,7 +463,7 @@
         'options' => '选项',
         'required' => '必填',
         'required_comment' => '下订单前该字段必填',
-        'is_required' => '是否必填',
+        'is_required' => '必填',
         'is_not_required' => '非必填',
     ],
     'tax' => [
