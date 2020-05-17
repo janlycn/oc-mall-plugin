@@ -1,5 +1,8 @@
-<?php namespace OFFLINE\Mall\Models;
+<?php
 
+namespace OFFLINE\Mall\Models;
+
+use Illuminate\Support\Str;
 use Model;
 use October\Rain\Database\Traits\Validation;
 use OFFLINE\Mall\Classes\Traits\HashIds;
@@ -14,8 +17,7 @@ class PropertyValue extends Model
     public $translatable = [
         ['value', 'index' => true],
     ];
-    public $rules = [
-    ];
+    public $rules = [];
     public $fillable = [
         'value',
         'product_id',
@@ -56,7 +58,11 @@ class PropertyValue extends Model
         if ($this->isColor()) {
             $value = $this->jsonDecodeValue()['name'] ?? '';
         }
+
         $this->index_value = str_slug($value);
+        if (!$this->index_value) {
+            $this->index_value =  Str::random(8);
+        }
     }
 
     public function setValueAttribute($value)
@@ -75,15 +81,15 @@ class PropertyValue extends Model
         $value = $this->getAttributeTranslated('value');
 
         if ($type === 'float') {
-            return (float)$value;
+            return (float) $value;
         }
 
         if ($type === 'integer') {
-            return (int)$value;
+            return (int) $value;
         }
 
         if ($type === 'checkbox') {
-            $key = (bool)$value ? 'checked' : 'unchecked';
+            $key = (bool) $value ? 'checked' : 'unchecked';
 
             return trans('offline.mall::lang.common.' . $key);
         }
@@ -147,7 +153,7 @@ class PropertyValue extends Model
     private function jsonDecodeValue($value = null)
     {
         $value = $value ?? $this->attributes['value'];
-        if ( ! $value) {
+        if (!$value) {
             return null;
         }
 
@@ -166,7 +172,7 @@ class PropertyValue extends Model
             $name = $value['name'] ?? false;
             $hex  = $value['hex'] ?? false;
             // If both keys are empty store this value as null.
-            if ( ! $name && ! $hex) {
+            if (!$name && !$hex) {
                 return null;
             }
         }
